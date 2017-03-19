@@ -43,5 +43,15 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>I need to know where you are...</string>
+	<key>NSLocationUsageDescription</key>
+	<string>I need to know where you are...</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>I want to hear your voice...</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>I want to hear your voice...</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>New Entry</string>
 </dict>
 </plist>
