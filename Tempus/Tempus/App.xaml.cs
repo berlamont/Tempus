@@ -1,5 +1,6 @@
-﻿using Tempus.Views;
-
+﻿using Tempus.ViewModels;
+using Tempus.Views;
+using static System.Diagnostics.Debug;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,28 +12,41 @@ namespace Tempus
 		public App()
 		{
 			InitializeComponent();
-
-			SetMainPage();
-		}
-
-		public static void SetMainPage()
-		{
-			Current.MainPage = new TabbedPage
+			var tabs = new TabbedPage
 			{
+				Title = "My Weather",
+				BindingContext = new WeatherViewModel(),
 				Children =
 				{
-					new NavigationPage(new ItemsPage())
-					{
-						Title = "Browse",
-						Icon = Device.OnPlatform("tab_feed.png",null,null)
-					},
-					new NavigationPage(new AboutPage())
-					{
-						Title = "About",
-						Icon = Device.OnPlatform("tab_about.png",null,null)
-					},
+					new WeatherView(),
+					new ForecastView()
 				}
 			};
+
+			MainPage = new NavigationPage(tabs)
+			{
+				BarBackgroundColor = Color.FromHex("3498db"),
+				BarTextColor = Color.White
+			};
+		}
+
+		protected override void OnStart()
+		{
+			base.OnStart();
+			WriteLine("Application OnStart");
+		}
+
+		protected override void OnSleep()
+		{
+			base.OnSleep();
+			WriteLine("Application OnSleep");
+		}
+
+		protected override void OnResume()
+		{
+			base.OnResume();
+			WriteLine("Application OnResume");
 		}
 	}
 }
+

@@ -1,36 +1,33 @@
 ﻿using Tempus.Helpers;
-using Tempus.Models;
-using Tempus.Services;
-
-using Xamarin.Forms;
 
 namespace Tempus.ViewModels
 {
-	public class BaseViewModel : ObservableObject
-	{
-		/// <summary>
-		/// Get the azure service instance
-		/// </summary>
-		public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+    public class BaseViewModel : ObservableObject
+    {
+        bool _isBusy;
 
-		bool isBusy = false;
-		public bool IsBusy
-		{
-			get { return isBusy; }
-			set { SetProperty(ref isBusy, value); }
-		}
-		/// <summary>
-		/// Private backing field to hold the title
-		/// </summary>
-		string title = string.Empty;
-		/// <summary>
-		/// Public property to set and get the title of the item
-		/// </summary>
-		public string Title
-		{
-			get { return title; }
-			set { SetProperty(ref title, value); }
-		}
-	}
+        /// <summary>
+        ///     Private backing field to hold the title
+        /// </summary>
+        string _title = string.Empty;
+
+        /// <summary>
+        ///     Get the azure service instance
+        /// </summary>
+     
+        public bool IsBusy
+        {
+            get => _isBusy;
+            set => SetProperty(ref _isBusy, value);
+        }
+
+        /// <summary>
+        ///     Public property to set and get the title of the item
+        /// </summary>
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
+        }
+    }
 }
-
