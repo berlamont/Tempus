@@ -14,7 +14,7 @@ namespace Tempus
 			InitializeComponent();
 			var mdPage = new MasterDetailPage()
 			{
-				Title = "My Weather",
+				Title = "Da Weather",
 				BindingContext = new WeatherViewModel(),
 				Master = new WeatherView(),
 				Detail = new NavigationPage(new ForecastView())
