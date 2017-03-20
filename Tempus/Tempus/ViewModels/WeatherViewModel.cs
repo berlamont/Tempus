@@ -43,7 +43,6 @@ namespace Tempus.ViewModels
 			}
 		}
 
-
 		bool _isImperial = Settings.IsImperial;
 
 		public bool IsImperial
@@ -56,7 +55,6 @@ namespace Tempus.ViewModels
 				Settings.IsImperial = value;
 			}
 		}
-
 
 		string _temp = string.Empty;
 
@@ -82,8 +80,7 @@ namespace Tempus.ViewModels
 			}
 		}
 
-
-		bool _isBusy = false;
+		bool _isBusy;
 
 		public bool IsBusy
 		{
@@ -107,7 +104,6 @@ namespace Tempus.ViewModels
 			}
 		}
 
-
 		ICommand _getWeather;
 
 		public ICommand GetWeatherCommand =>
@@ -123,7 +119,6 @@ namespace Tempus.ViewModels
 					WeatherRoot weatherRoot;
 					var units = IsImperial ? Units.Imperial : Units.Metric;
 
-
 					if (UseGps)
 					{
 						var gps = await CrossGeolocator.Current.GetPositionAsync(10000).ConfigureAwait(false);
@@ -134,7 +129,6 @@ namespace Tempus.ViewModels
 						//Get weather by city
 						weatherRoot = await WeatherService.GetWeather(Location.Trim(), units).ConfigureAwait(false);
 					}
-
 
 					//Get forecast based on cityId
 					Forecast = await WeatherService.GetForecast(weatherRoot, units).ConfigureAwait(false);

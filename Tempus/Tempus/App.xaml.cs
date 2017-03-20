@@ -12,18 +12,15 @@ namespace Tempus
 		public App()
 		{
 			InitializeComponent();
-			var tabs = new TabbedPage
+			var mdPage = new MasterDetailPage()
 			{
 				Title = "My Weather",
 				BindingContext = new WeatherViewModel(),
-				Children =
-				{
-					new WeatherView(),
-					new ForecastView()
-				}
+				Master = new WeatherView(),
+				Detail = new NavigationPage(new ForecastView())
 			};
 
-			MainPage = new NavigationPage(tabs)
+			MainPage = new NavigationPage(mdPage)
 			{
 				BarBackgroundColor = Color.FromHex("3498db"),
 				BarTextColor = Color.White

@@ -15,8 +15,7 @@ namespace Tempus.Views
         public WeatherView()
         {
             InitializeComponent();
-            if (Device.OS == TargetPlatform.iOS)
-                Icon = new FileImageSource { File = "ic_cloud_blue_grey_300_24p.png" };
+
         }
     }
 }

@@ -16,8 +16,6 @@ namespace Tempus.Views
 		{
 			InitializeComponent();
 
-			if(Device.OS == TargetPlatform.iOS)
-				Icon = new FileImageSource{ File = "ic_wb_sunny_yellow_light_24dp.png"};
 		}
 	}
 }

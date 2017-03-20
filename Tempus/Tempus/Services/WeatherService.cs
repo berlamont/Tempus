@@ -34,7 +34,6 @@ namespace Tempus.Services
 
                 return DeserializeObject<WeatherRoot>(json);
             }
-
         }
 
         public static async Task<WeatherRoot> GetWeather(string city, Units units = Units.Imperial)
@@ -49,7 +48,6 @@ namespace Tempus.Services
 
                 return DeserializeObject<WeatherRoot>(json);
             }
-
         }
 
         public Task<WeatherForecastRoot> GetForecast(WeatherRoot weather, Units units = Units.Imperial)
@@ -73,7 +71,6 @@ namespace Tempus.Services
 
                 return DeserializeObject<WeatherForecastRoot>(json);
             }
-
         }
 
         public async Task<WeatherForecastRoot> GetForecast(double lat, double lon, Units units = Units.Imperial)
@@ -88,7 +85,6 @@ namespace Tempus.Services
 
                 return DeserializeObject<WeatherForecastRoot>(json);
             }
-
         }
     }
 }

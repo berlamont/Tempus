@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>Tempus.iOS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.michiganwebmedia.tempus</string>
+	<string>com.michiganwebmedia.Tempus</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -53,5 +53,16 @@
 	<string>I want to hear your voice...</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>New Entry</string>
+	<key>UIStatusBarHidden~ipad</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+		<string>fetch</string>
+	</array>
+	<key>XSAppIconAssets</key>
+	<string>Resources/AppIcons.xcassets/AppIcons.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/AppIcons.xcassets/LaunchImages.launchimage</string>
 </dict>
 </plist>
