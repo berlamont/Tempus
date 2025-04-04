@@ -7,7 +7,8 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidTlsProvider></AndroidTlsProvider>
+    <AndroidTlsProvider>
+    </AndroidTlsProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <AndroidLinkMode>None</AndroidLinkMode>
@@ -15,9 +16,6 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-  </PropertyGroup>
-  <PropertyGroup>
-    <TargetFramework>net60-android</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tempus\Tempus.csproj" />
@@ -38,6 +36,6 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="23.3.0" />
     <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="23.3.0" />
     <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="23.3.0" />
-    <PackageReference Include="Xamarin.Forms" Version="2.3.3.193" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2662" />
   </ItemGroup>
 </Project>

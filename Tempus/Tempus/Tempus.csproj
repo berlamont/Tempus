@@ -1,9 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard1.1</TargetFramework>
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <WarningLevel>4</WarningLevel>
+    <TargetFrameworks>net9.0</TargetFrameworks>
+    <UseMaui>True</UseMaui>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SingleProject>true</SingleProject>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="App.xaml.cs">
@@ -35,10 +38,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-    <PackageReference Include="Xam.Plugin.Geolocator" Version="3.0.4" />
-    <PackageReference Include="Xam.Plugins.Settings" Version="2.5.4" />
-    <PackageReference Include="Xam.Plugins.TextToSpeech" Version="2.0.0" />
-    <PackageReference Include="Xamarin.Forms" Version="2.3.3.193" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Xam.Plugins.TextToSpeech" Version="4.0.0.7" />
   </ItemGroup>
 </Project>
